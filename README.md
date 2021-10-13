@@ -27,13 +27,13 @@ The scraping for this project used the following:
 
 ### Mars Facts
 
-[Visited the Mars Facts webpage](https://galaxyfacts-mars.com)
+[Mars Facts Site](https://galaxyfacts-mars.com)
 * Uses Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
 * Use Pandas to convert the data to a HTML table string.
 
 ### Mars Hemispheres
 
-[Visited an Astrology Site](https://marshemispheres.com/)
+[Mars Astrology Site](https://marshemispheres.com/)
 * Obtained high resolution images for each of Mar's hemispheres
 * Uses a Python dictionary to store the data using the keys `img_url` and `title`
 

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
+        <title>Mars Scraper</title>
         <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -61,18 +61,15 @@
                     <!-- Post preview-->
                     <div class="post-preview">
                         <a><h2 class="post-title">Featured Mars Image</h2></a>
-                        <img class="card-img-bottom img-fluid zoom" src="{{ mars.featured_image_url }}" alt="Featured Mars Image">
+                        <img class="card-img-bottom img-fluid zoom" src="{{ mars.featured_img_url }}" alt="Featured Mars Image">
 
                     </div>
                 </div> 
                 <div class=col-5>   
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a>
-                            <h2 class="post-title">Mars Facts Table</h2>
-                        </a>
-                        <p class="card-text" id="dark-font">{{ mars.fact_table | safe }}</p>
-
+                        <a><h2 class="post-title">Mars Facts Table</h2></a>
+                        <table class="table table-bordered table-dark"  style="text-align: left">{{ mars.facts_table | safe }}</table>
                     </div>
                 </div>
             </div>        

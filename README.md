@@ -33,7 +33,7 @@ The scraping for this project used the following:
 
 ### Mars Hemispheres
 
-[here](https://marshemispheres.com/)
+[Visited an Astrology Site](https://marshemispheres.com/)
 * Obtained high resolution images for each of Mar's hemispheres
 * Uses a Python dictionary to store the data using the keys `img_url` and `title`
 

@@ -97,7 +97,7 @@ def scrape():
         img_page_soup = BeautifulSoup(browser.html, 'html.parser')
         
         # Locate image url for full-resolution photo
-        img_url = img_page_soup.find('div', class_='downloads').find_all('li')[1].find('a')['href']
+        img_url = img_page_soup.find('div', class_='downloads').find_all('li')[0].find('a')['href']
         
         # Append image urls to a list 
         url_list.append(f'{hemi_url}{img_url}')

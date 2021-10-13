@@ -41,7 +41,7 @@
         </header>
         <!-- Main Content-->
         <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="row gx-4 gx-lg-5">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Mars News-->
                     <div class="post-preview">
@@ -56,25 +56,28 @@
                 <!-- Divider-->
                 <hr class="my-4" />
             </div> 
-            <div class=row>
-                <div class=col-7>   
+          
+            <div class="row justify-content-md-center gx-4 gx-lg-5 ">
+                <div class="col col-12 col-lg-6">   
                     <!-- Post preview-->
                     <div class="post-preview">
                         <a><h2 class="post-title">Featured Mars Image</h2></a>
-                        <img class="card-img-bottom img-fluid zoom" src="{{ mars.featured_img_url }}" alt="Featured Mars Image">
+                        <img class="card-img" src="{{ mars.featured_img_url }}" alt="Featured Mars Image">
 
                     </div>
                 </div> 
-                <div class=col-5>   
+                <div class="col col-12 col-lg-6">   
                     <!-- Post preview-->
                     <div class="post-preview">
                         <a><h2 class="post-title">Mars Facts Table</h2></a>
-                        <table class="table table-bordered table-dark"  style="text-align: left">{{ mars.facts_table | safe }}</table>
+                        <table class="table-dark">{{ mars.facts_table | safe }}</table>
                     </div>
                 </div>
-            </div>        
-                    <!-- Divider-->
-                    <hr class="my-4" />
+             <!-- Divider-->
+             <hr class="my-4" />
+
+            <div class="row">
+               
                     <!-- Post preview-->
                     <div class="post-preview">
                         <a>
@@ -85,9 +88,48 @@
                             Posted on July 8, 2021
                         </p>
                     </div>
-            
-            
+            </div>
+            <div class="row">
+                <div class="column">
+
+                </div>
+                <div class="column">
+
+                </div>
+                <div class="column">
+
+                </div>
+                <div class="column">
+
+                </div>
+            </div>
         </div>
+
+    </div>
+    <!-- Hemispheres -->
+      <div class="container">
+          <h4 class="text-lg-center text-center">Mars Hemispheres</h4>
+          <div class="col-md-12">
+              <div class="row">
+                  <style>
+                      .zoom:hover {
+                          transform: scale(1.25);
+                      }
+                  </style>
+                  {% for hemisphere in mars.hemisphere_imgs %}
+                  <div class="col-md-6">
+                      <div class="card text-white border-warning mb-3" style="margin: 40px;">
+                          <img class="card-img-top img-fluid zoom" src="{{ hemisphere.img_url }}" />
+                          <div class="card-body">
+                              <p class="card-text">{{ hemisphere.title }}</p>
+                          </div>
+                      </div>
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+        
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">

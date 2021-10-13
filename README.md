@@ -41,7 +41,7 @@ The scraping for this project used the following:
 
 ## Step 2 - MongoDB and Flask Application
 
-Used MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
+Used MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above. Bootstrap was implemented to help with layout. See as screenshot of finished scraping below:
 
 
-![final_app_part1.png](Images/final_app.png)
+![homepage_2](Screenshots/homepage_2.png)

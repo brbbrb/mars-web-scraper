@@ -50,7 +50,7 @@
                             <h3 class="post-subtitle">{{ mars.news_title }}</h3>
                         </a>
                         <p class="post-meta">
-                            P{{ mars.news_p }}
+                            {{ mars.news_p }}
                         </p>
                     </div>
                 <!-- Divider-->
@@ -78,38 +78,14 @@
 
             <div class="row">
                
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a>
-                            <h2 class="post-title">Mars Hemispheres</h2>
-                            <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted on July 8, 2021
-                        </p>
-                    </div>
-            </div>
-            <div class="row">
-                <div class="column">
-
-                </div>
-                <div class="column">
-
-                </div>
-                <div class="column">
-
-                </div>
-                <div class="column">
-
-                </div>
-            </div>
         </div>
 
     </div>
     <!-- Hemispheres -->
       <div class="container">
-          <h4 class="text-lg-center text-center">Mars Hemispheres</h4>
-          <div class="col-md-12">
+        <div class="post-preview">
+            <a><h2 class="post-title">Mars Hemispheres</h2></a>          
+            <div class="col-md-12">
               <div class="row">
                   <style>
                       .zoom:hover {
@@ -117,11 +93,11 @@
                       }
                   </style>
                   {% for hemisphere in mars.hemisphere_imgs %}
-                  <div class="col-md-6">
-                      <div class="card text-white border-warning mb-3" style="margin: 40px;">
-                          <img class="card-img-top img-fluid zoom" src="{{ hemisphere.img_url }}" />
-                          <div class="card-body">
-                              <p class="card-text">{{ hemisphere.title }}</p>
+                  <div class="col-md-3">
+                      <div class="card border-0 mb-3" style="margin: 40px;">
+                          <img src="{{ hemisphere.img_url }}">
+                          <div>
+                              <p>{{ hemisphere.title }}</p>
                           </div>
                       </div>
                   </div>
